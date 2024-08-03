@@ -8,6 +8,7 @@ body {
     min-height: 100vh;
     margin: 0;
     overflow: hidden;
+    transform: scale(0.5);
 }
 
 /*Titel*/
@@ -22,6 +23,7 @@ h1 {
 .container{
     background: rgba(24,24,27,0.1);
     border-radius: 25px;
+    margin-top: 0px;
     margin-left: 200px;
     margin-right: 200px;
     max-width: 450px;
@@ -210,6 +212,12 @@ button:hover{
 }
 
 @media only screen and (max-width: 400px) {
+    body{
+        transform: scale(0.7);
+    }
+}
+
+@media only screen and (max-width: 1280px) {
     body{
         transform: scale(0.7);
     }
