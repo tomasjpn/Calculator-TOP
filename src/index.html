@@ -7,35 +7,39 @@
 </head>
 <body>
     <h1>Calculator</h1>
-    <div class="background"></div>
+    <!-- Hintergrund -->
+    <div class="background"></div> 
+
+    <!-- Container des Taschenrechners-->
     <div class="container">
-        <div class="input-display">
-            <input id="inputDisplay" readonly></input>
+        <!-- Anzeige des Taschenrechners -->
+        <div class="input-display" id="input-display">
+            <input id="inputDisplay" readonly placeholder="0">
         </div>
+        <!-- Tasten des Taschenrechners -->
         <div class="calc-buttons">
-            <button>7</button>
-            <button>8</button>
-            <button>9</button>
-            <button id="operatorBtn">x</button>
-            <button>4</button>
-            <button>5</button>
-            <button>6</button>
-            <button id="operatorBtn">-</button>
-            <button>1</button>
-            <button>2</button>
-            <button>3</button>
-            <button id="operatorBtn">+</button>
-            <button>0</button>
-            <button id="operatorBtn">.</button>
-            <button id="operatorBtn">÷</button>
-            <button class="equal">=</button>
+            <button onclick="displayVal('7')">7</button>
+            <button onclick="displayVal('8')">8</button>
+            <button onclick="displayVal('9')">9</button>
+            <button id="operatorBtn" onclick="displayVal('*')">x</button>
+            <button onclick="displayVal('4')">4</button>
+            <button onclick="displayVal('5')">5</button>
+            <button onclick="displayVal('6')">6</button>
+            <button id="operatorBtn" onclick="displayVal('-')">-</button>
+            <button onclick="displayVal('1')">1</button>
+            <button onclick="displayVal('2')">2</button>
+            <button onclick="displayVal('3')">3</button>
+            <button id="operatorBtn" onclick="displayVal('+')">+</button>
+            <button onclick="displayVal('0')">0</button>
+            <button id="operatorBtn" onclick="displayVal('.')">.</button>
+            <button id="operatorBtn" onclick="displayVal('/')">÷</button>
+            <button class="equal" onclick="calculateVal()">=</button>
+            <!-- Tasten: Löschen -->
              <div class="button-container">
-                <button id="clearBtn">C</button>
-                <button id="delBtn">DEL</button>
+                <button id="clearBtn" onclick="clearInput()">C</button>
+                <button id="delBtn" onclick="deleteLastInput()">DEL</button>
             </div>
         </div>
     </div>
-    
-    
 </body>
 </html>
