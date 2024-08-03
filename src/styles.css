@@ -1,0 +1,99 @@
+body {
+    background: aliceblue;
+}
+
+h1 {
+    text-align: center;
+    color: #b7b5b5;
+}
+
+.container{
+    background: rgba(24,24,27,0.1);
+    border-radius: 25px;
+    margin-left: 200px;
+    margin-right: 200px;
+    max-width: 450px;
+    max-height: 770px;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+}
+
+.input-display{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+#inputDisplay{
+    width: 100%;
+    border: none;
+    border-radius: 25px;
+    height: 150px;
+    background-color: rgba(24, 24, 27, 0.068);
+}
+
+.calc-buttons{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 50px;
+    align-items: center;
+    justify-content: center;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 10px;
+}
+
+button{
+    width: 90px;
+    height: 90px;
+    font-size: 36px;
+    font-weight: bold;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    background-color: rgba(24, 24, 27, 0.068);
+}
+
+button:hover{
+    background-color: rgba(24, 24, 27, 0.111);
+    transition: background-color 0.3s;
+}
+
+#operatorBtn{
+    color: rgb(249, 169, 160);
+}
+
+.equal{
+    background-color: rgb(251, 142, 130);
+    height: 200px;
+    grid-row: span 2;
+}
+
+.button-container{
+    margin-bottom: 10px;
+    grid-column: span 3;
+    margin-top: 20px;
+}
+
+#clearBtn, #delBtn{
+    background-color: rgba(251, 142, 130, 0.586);
+    width: 140px;
+    height: 90px;
+}
+#clearBtn{
+    margin-right: 5px;
+}
+
+#clearBtn:hover, #delBtn:hover {
+    background-color: rgba(251, 142, 130, 0.895);
+    transition: background-color 0.3s;
+}
+
+.equal:hover{
+    background-color: rgba(247, 88, 70, 0.797);
+    transition: background-color 0.3s;
+}
