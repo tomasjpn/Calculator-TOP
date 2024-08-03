@@ -29,8 +29,30 @@ h1 {
     overflow: hidden;
     align-items: center;
     justify-content: center;
-    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.121);
+    animation: shadow 4s ease-in-out forwards, slideUp 1.5s ease-out forwards;
 }
+
+
+/*Animation: Shatten*/
+@keyframes shadow{
+    from {
+        box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+    }
+    to{
+        box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.186);
+    }
+}
+
+/* Animation: hoch sliden */
+@keyframes slideUp {
+    from {
+        transform: translateY(100vh);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
 
 /*Anzeige des Taschenrechners*/
 .input-display{
@@ -76,6 +98,56 @@ button{
     cursor: pointer;
     color: rgb(255, 255, 255);
     background-color: rgba(24, 24, 27, 0.068);
+    opacity: 0; 
+    animation: fadeIn 0.5s ease-out forwards; 
+}
+
+/* Animation: Fade-In für Buttons */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Verschiedene Verzögerungen für Buttons */
+button:nth-child(1) {
+    animation-delay: 0s;
+}
+button:nth-child(2) {
+    animation-delay: 0.1s;
+}
+button:nth-child(3) {
+    animation-delay: 0.2s;
+}
+button:nth-child(4) {
+    animation-delay: 0.3s;
+}
+button:nth-child(5) {
+    animation-delay: 0.4s;
+}
+button:nth-child(6) {
+    animation-delay: 0.5s;
+}
+button:nth-child(7) {
+    animation-delay: 0.6s;
+}
+button:nth-child(8) {
+    animation-delay: 0.7s;
+}
+button:nth-child(9) {
+    animation-delay: 0.8s;
+}
+button:nth-child(10) {
+    animation-delay: 0.9s;
+}
+button:nth-child(11) {
+    animation-delay: 1s;
+}
+button:nth-child(12) {
+    animation-delay: 1.1s;
 }
 
 /*hover Animation*/
@@ -83,6 +155,17 @@ button:hover{
     background-color: rgba(24, 24, 27, 0.111);
     transition: background-color 0.3s;
 }
+
+/* Spezielle Buttons */
+#operatorBtn, .equal, #clearBtn, #delBtn {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+/* Animation Delay für spezielle Buttons */
+#operatorBtn { animation-delay: 1.2s; }
+.equal { animation-delay: 1.3s; }
+#clearBtn { animation-delay: 1.4s; }
+#delBtn { animation-delay: 1.5s; }
 
 #operatorBtn{
     color: rgb(249, 169, 160);
